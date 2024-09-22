@@ -89,7 +89,7 @@ mongoose.connect(
 );
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the AmigoChat API");
+  res.send("Welcome to chatter club");
 });
 
 /* Port Listening In */
