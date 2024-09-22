@@ -9,7 +9,6 @@ import chatroomRoutes from "./routes/chatrooms.js";
 import http from "http";
 import { Server } from "socket.io";
 
-
 /* App Config */
 const app = express();
 const port = process.env.PORT || 5000;
@@ -18,7 +17,6 @@ dotenv.config();
 /* Middleware -> Deals the Connections between database and the App */
 app.use(express.json());
 app.use(cors());
-
 
 /* Socket.io Setup */
 const server = http.createServer(app);
@@ -90,9 +88,9 @@ mongoose.connect(
   }
 );
 
-app.get("/",(req,res)=>{
-  res.send("Welcome to the AmigoChat API")
-})
+app.get("/", (req, res) => {
+  res.send("Welcome to the AmigoChat API");
+});
 
 /* Port Listening In */
 server.listen(port, () => {
